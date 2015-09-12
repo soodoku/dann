@@ -1,3 +1,23 @@
+#' dann2
+#'
+#' @param x
+#' @param testx
+#' @param y
+#' @param k 
+#' @param kmetric 
+#' @param epsilon 
+#' @param rate 
+#' @param fullw
+#' @param scalar
+#' @param iter
+#' @param covmin
+#' @param cv
+#'
+#' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
+#' No. of fields remaining (given the money), and when the application credits expire. 
+#' @export
+#' @usage # dann2()
+
 dann2 <-
 function (x, testx = matrix(double(p), nrow = 1), y, k = 5, kmetric = length(y)/2, 
     epsilon = 1, rate = 0.5, fullw = FALSE, scalar = FALSE, iter = 1, 

@@ -1,9 +1,10 @@
 #' dann
 #'
 #' 
-#' @return A list with items including Name of the Application, No. of pages remaining (given the money), No. of fields remaining (given the money), and when the application credits expire. 
+#' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
+#' No. of fields remaining (given the money), and when the application credits expire. 
 #' @export
-#' @usage # dann()
+#' \@usage # dann()
 
 dann <- 
 function(x, testx = matrix(double(p), nrow = 1), y, k = 5, 

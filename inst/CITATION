@@ -1,15 +1,15 @@
-citHeader("To cite package 'abbyyR' in publications use:")
+citHeader("To cite package 'dann' in publications use:")
      
 year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
 vers <- paste("R package version", meta$Version)
  
 citEntry(entry="Manual",
 		  title = "abbyyR: Access Abbyy FineReader Cloud OCR API via R",
-		  author = personList(as.person("Gaurav SOod")),
+		  author = personList(as.person("Trevor Hastie")),
 		  year = year,
 		  note = vers,
 		  textVersion =
-		  paste("Gaurav Sood (",
+		  paste("Trevor Hastie (",
 				year,
-				"). abbyyR: Access Abbyy FineReader Cloud OCR API via R. ",
+				"). dann: Discriminant Analysis Nearest Neighbor. ",
 				vers, ".", sep=""))

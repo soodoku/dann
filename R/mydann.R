@@ -1,7 +1,13 @@
-mydann <-
-function (train.data, test.data, 
-    p = dim(x)[2], kmetric = max(50, 0.2 * n), k = 5, epsilon.list = c(1, 
-        0.5, 2, 5), iter.list = 1, ...) 
+#' min2d
+#'
+#' @param mat matrix 
+#' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
+#' No. of fields remaining (given the money), and when the application credits expire. 
+#' @export
+#' @usage min2d()
+
+mydann <- 
+function (train.data, test.data, p = dim(x)[2], kmetric = max(50, 0.2 * n), k = 5, epsilon.list = c(1, 0.5, 2, 5), iter.list = 1, ...) 
 {
     this.call <- match.call()
     x <- train.data$x
