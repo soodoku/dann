@@ -1,4 +1,4 @@
-#' dann2
+#' dannsub
 #'
 #' @param x
 #' @param km

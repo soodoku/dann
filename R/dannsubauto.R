@@ -1,3 +1,26 @@
+#' dannsubauto
+#'
+#' @param x
+#' @param km
+#' @param y
+#' @param k  
+#' @param epsilon 
+#' @param fullw
+#' @param scalex
+#' @param scalar
+#' @param iter
+#' @param dims
+#' @param iter.sub
+#' @param iter
+#' @param method
+#' @param xnew
+#' @param ynew
+#'
+#' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
+#' No. of fields remaining (given the money), and when the application credits expire. 
+#' @export
+#' @usage # dannsub()
+
 dannsubauto <-
 function (x, testx = matrix(double(p), 
     nrow = 1), y, k = 5, kmetric = max(0.2 * 

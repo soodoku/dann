@@ -1,11 +1,27 @@
 #' dann
 #'
+#' Main function 
 #' 
+#' @param x  matrix
+#' @param testx test
+#' @param y  y
+#' @param k  number of clusters
+#' @param kmetric metric
+#' @param epsilon epsilon
+#' @param fullw  fullw
+#' @param scalar boolean
+#' @param iter   number of iterations
+#' @param covmin cov
+#' @param cv cross-validate
+#'
+#'
 #' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
 #' No. of fields remaining (given the money), and when the application credits expire. 
+#' 
 #' @export
+#' 
 #' \@usage # dann()
-
+#' 
 dann <- 
 function(x, testx = matrix(double(p), nrow = 1), y, k = 5, 
 				kmetric = max(50, 0.2 * n), epsilon = 1, fullw = FALSE, scalar = FALSE, iter = 1, 

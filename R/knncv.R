@@ -1,9 +1,19 @@
+#' knncv
+#'
+#' Cross-validated k-means
+#' 
+#' @param x matrix  
+#' @param y 
+#' @param k number of clusters
+#'
+#' @return list of standardized matrices along with scaling information (centers)
+#' @export
+#' @usage \dontrun{
+#' knncv(x, y, k=5)
+#' }
 
-##
-## K Nearest Neighbor Cross-Validation
 knncv <-
-function (x, y, 
-    k = 5) 
+function (x, y, k = 5) 
 {
     storage.mode(x) <- "double"
     storage.mode(y) <- "integer"

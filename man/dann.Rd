@@ -4,12 +4,38 @@
 \alias{dann}
 \title{dann}
 \usage{
-# dann()
+dann(x, testx = matrix(double(p), nrow = 1), y, k = 5, kmetric = max(50,
+  0.2 * n), epsilon = 1, fullw = FALSE, scalar = FALSE, iter = 1,
+  covmin = 1e-04, cv = FALSE)
+}
+\arguments{
+\item{x}{matrix}
+
+\item{testx}{test}
+
+\item{y}{y}
+
+\item{k}{number of clusters}
+
+\item{kmetric}{metric}
+
+\item{epsilon}{epsilon}
+
+\item{fullw}{fullw}
+
+\item{scalar}{boolean}
+
+\item{iter}{number of iterations}
+
+\item{covmin}{cov}
+
+\item{cv}{cross-validate}
 }
 \value{
-A list with items including Name of the Application, No. of pages remaining (given the money), No. of fields remaining (given the money), and when the application credits expire.
+A list with items including Name of the Application, No. of pages remaining (given the money),
+No. of fields remaining (given the money), and when the application credits expire.
 }
 \description{
-dann
+Main function
 }
 

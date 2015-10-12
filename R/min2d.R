@@ -1,10 +1,9 @@
 #' min2d
 #'
 #' @param mat matrix 
-#' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
-#' No. of fields remaining (given the money), and when the application credits expire. 
+#' @return A vector
 #' @export
-#' @usage min2d()
+#' @usage min2d(matrix(rnorm(100,1,.2), ncol=5))
 
 min2d <-
 function (mat=NULL) 
