@@ -4,9 +4,7 @@
 \alias{dann}
 \title{dann}
 \usage{
-dann(x, testx = matrix(double(p), nrow = 1), y, k = 5, kmetric = max(50,
-  0.2 * n), epsilon = 1, fullw = FALSE, scalar = FALSE, iter = 1,
-  covmin = 1e-04, cv = FALSE)
+# dann()
 }
 \arguments{
 \item{x}{matrix}

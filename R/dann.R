@@ -20,7 +20,7 @@
 #' 
 #' @export
 #' 
-#' \@usage # dann()
+#' @usage # dann()
 #' 
 dann <- 
 function(x, testx = matrix(double(p), nrow = 1), y, k = 5, 
