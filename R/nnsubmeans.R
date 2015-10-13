@@ -1,3 +1,24 @@
+#' nnsubmeans
+#'
+#' Main function 
+#' 
+#' @param x  matrix
+#' @param y  y
+#' @param k  number of clusters
+#' @param epsilon epsilon
+#' @param fullw  fullw
+#' @param iter   number of iterations
+#' @param cv cross-validate
+#'
+#'
+#' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
+#' No. of fields remaining (given the money), and when the application credits expire. 
+#' 
+#' @export
+#' 
+#' @usage # dann()
+#'
+
 nnsubmeans <-
 function (x, y, 
     k = 20, epsilon = 1, fullw = FALSE, iter = 1, cv = 0) 

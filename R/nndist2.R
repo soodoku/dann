@@ -1,3 +1,27 @@
+#' nndist2
+#'
+#' Main function 
+#' 
+#' @param x  matrix
+#' @param y  y
+#' @param x0  colMeans of x
+#' @param ktarget  number of clusters
+#' @param rate  rate of learning
+#' @param epsilon epsilon
+#' @param fullw  fullw
+#' @param scalar boolean
+#' @param iter   number of iterations
+#' @param cv cross-validate
+#'
+#'
+#' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
+#' No. of fields remaining (given the money), and when the application credits expire. 
+#' 
+#' @export
+#' 
+#' @usage # dann()
+#'
+
 nndist2 <-
 function (x, y, 
     x0 = apply(x, 2, mean), kmetric = length(y)/2, ktarget = 5, 

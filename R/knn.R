@@ -1,5 +1,22 @@
-##
-## K Nearest Neighbor
+#' knn
+#'
+#' K-nearest Neighbors
+#' 
+#' @param train  matrix
+#' @param test test
+#' @param cl  number of clusters
+#' @param k  number of clusters
+#'
+#'
+#' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
+#' No. of fields remaining (given the money), and when the application credits expire. 
+#' 
+#' @export
+#' 
+#' @usage \dontrun{ 
+#' knn()
+#'}
+
 knn <- function (train, test, cl, k = 1) 
 {
     train <- as.matrix(train)

@@ -1,3 +1,18 @@
+#' nnsubspace
+#'
+#' @param x
+#' @param y
+#' @param k  
+#' @param epsilon 
+#' @param fullw
+#' @param iter
+#' @param cv
+#'
+#' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
+#' No. of fields remaining (given the money), and when the application credits expire. 
+#' @export
+#' @usage # dannsub()
+
 nnsubspace <-
 function (x, y, 
     k = length(y)/2, epsilon = 1, fullw = FALSE, iter = 1, cv = 0) 
