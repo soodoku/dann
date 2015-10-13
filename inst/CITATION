@@ -4,12 +4,12 @@ year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
 vers <- paste("R package version", meta$Version)
  
 citEntry(entry="Manual",
-		  title = "abbyyR: Access Abbyy FineReader Cloud OCR API via R",
+		  title = "dann: Discriminant Adaptive Nearest Neighbor Classification",
 		  author = personList(as.person("Trevor Hastie")),
 		  year = year,
 		  note = vers,
 		  textVersion =
 		  paste("Trevor Hastie (",
 				year,
-				"). dann: Discriminant Analysis Nearest Neighbor. ",
+				"). dann: Discriminant Adaptive Nearest Neighbor Classification.",
 				vers, ".", sep=""))
