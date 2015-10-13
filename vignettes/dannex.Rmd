@@ -1,13 +1,19 @@
-##################################################
-##   											##
-##      DANN Examples. Last Edited: 3.15.11  	##
-## 												## 
-##################################################
+### dann: Discriminant Adaptive Nearest Neighbors
 
-# Gen.ex1
-##################################
+
+#### Load the package
+
+To get started, load the package. The latest version of the package will always be on github. Instructions for installing the package from github are provided below.
+
+```{r, eval=FALSE, install}
 library(dann)
-gen.ex1 <- function(ntr=200,nte=1){
+```
+
+#####  Generate some simulated data
+
+```{r, eval=FALSE, genex1}
+gen.ex1 <- 
+function(ntr=200, nte=1){
 	
 	x1 <- rnorm(ntr)
 	x2 <- cbind(x1, x1+1.0*rnorm(ntr))
@@ -23,14 +29,15 @@ gen.ex1 <- function(ntr=200,nte=1){
 	xx <- rbind(x2,x4)
 	yy <- c(rep(1,nte),rep(2,nte))
 	
-	return(list(x=x,y=y,xx=xx,yy=yy))
+	return(list(x=x, y=y, xx=xx, yy=yy))
 }
+```
 
+```{r, eval=FALSE, genex1}
 ex1 <-
 function (fullw = FALSE, iter = 1) 
 {
 	#list(c("#attach(\"dann.Data\")", "#attach(\"dann.Data\")", "#options(error=dump.frames)", "# 2d normals"))
-	data(dannt)
 	n <- 200
 	nte <- 500
 	z <- gen.ex1(n/2, nte/2)		
@@ -57,11 +64,12 @@ function (fullw = FALSE, iter = 1)
 	apply(yhat3 != yy, 2, sum)
 	list(ex1.train = list(x = xs, y = y), ex1.test = list(x = xxs, y = yy))
 }
-
+```
 ## Gen ex2
-#########################################
 
-gen.ex2 <- function(ntr,nte, nextra=0, delta=1){
+```{r, eval=FALSE, genex2}
+gen.ex2 <- 
+function(ntr, nte, nextra=0, delta=1){
 		
 	sigma <- 1
 	rho <- .7
@@ -85,9 +93,12 @@ gen.ex2 <- function(ntr,nte, nextra=0, delta=1){
 	
 	return(list(x=x,y=y,xx=xx,yy=yy))
 }
+```
+
+```{r, eval=FALSE, ex2}
 
 ex2 <-
-		function (fullw = FALSE, covmin = 1e-04, iter = 1) 
+function (fullw = FALSE, covmin = 1e-04, iter = 1) 
 {
 	#list(c("#attach(\"dann.RData\")", "#attach(\"dannex.RData\")", "#options(error=dump.frames)", "# 2d normals with noise"))
 	data(dannt)
@@ -119,9 +130,10 @@ ex2 <-
 	cat(c("5nn in 2d", sum(d != yy)), fill = TRUE)
 	apply(yhat3 != yy, 2, sum)
 }
-
+```
 # Glass Data Example
-################################
+
+```{r, eval=FALSE, glass}
 glass <-
 function (fullw = FALSE, iter = 1, kmet = 50) 
 {
@@ -145,12 +157,13 @@ function (fullw = FALSE, iter = 1, kmet = 50)
     cat(c("5nn", sum(yhat1 != yy)), fill = TRUE)
     apply(yhat2 != yy, 2, sum)
 }
-
+```
 ## Sonar Data Example
-##########################
+
+```{r, eval=FALSE, sonar}
 
 sonar <-
-		function (fullw = FALSE, scalar = FALSE, iter = 1) 
+function (fullw = FALSE, scalar = FALSE, iter = 1) 
 {
 	data(dannt)
 	#attach(paste(.libPaths()[1], "dann/data/", "dann.RData", sep=""))
@@ -168,11 +181,14 @@ sonar <-
 			fullw = fullw, scalar = scalar, iter = iter, cv = TRUE)
 	apply(yhat2 != yy, 2, sum)
 }
+```
 
 ##	Vowel
-################################
+
+```{r, eval=FALSE, vowel}
+
 vowel <-
-		function (fullw = FALSE, iter = 1) 
+function (fullw = FALSE, iter = 1) 
 {
 	data(dannt)
 	#attach(paste(.libPaths()[1], "dann/data/", "dann.RData", sep=""))
@@ -203,11 +219,14 @@ vowel <-
 	#detach(2)
 	apply(yhat3 != yy, 2, sum)
 }
+```
 
 ## Sph 
-######################
+
+```{r, eval=FALSE, sph}
+
 sph <-
-		function (fullw = FALSE, iter = 1) 
+function (fullw = FALSE, iter = 1) 
 {
 	#list(c("#attach(\"dann.RData\")", "#attach(\"dann.RData\")"))
 	#attach(paste(.libPaths()[1], "dann/data/", "dann.RData", sep=""))
@@ -237,3 +256,4 @@ sph <-
 	cat(c("5nn/4", sum(d != yy)), fill = TRUE)
 	apply(yhat3 != yy, 2, sum)
 }
+```
