@@ -24,8 +24,6 @@ function (x, y,
     np <- dim(x)
     p <- np[2]
     n <- np[1]
-    if (!is.loaded("nndist")) 
-		dyn.load(paste(.libPaths()[1], "/dann/libs/dann.so", sep=""))
     between <- matrix(0, p, p)
     for (i in seq(n)) {
         junk <- .Fortran("nndist", as.integer(np[1]), as.integer(np[2]), 

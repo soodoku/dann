@@ -2,7 +2,6 @@
 
 export(dann)
 export(dann2)
-export(dannsub)
 export(dannsubauto)
 export(knn)
 export(knncv)

@@ -35,8 +35,6 @@ function (x, y,
     np <- dim(x)
     p <- np[2]
     n <- np[1]
-    if (!is.loaded("nndist2")) 
-		dyn.load(paste(.libPaths()[1], "/dann/libs/dann.so", sep=""))
     junk <- .Fortran("nndist2", as.integer(np[1]), as.integer(np[2]), 
         as.integer(nclass), k = as.integer(c(kmetric, ktarget, 
             iter)), rem = as.double(c(rate, epsilon, 1e-04)), 

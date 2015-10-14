@@ -38,8 +38,6 @@ function (x, testx = matrix(double(p), nrow = 1), y, k = 5, kmetric = length(y)/
     if (cv) 
         ntest <- n
     else ntest <- nrow(testx)
-    if (!is.loaded("dann2")) 
-		dyn.load(paste(.libPaths()[1], "/dann/libs/dann.so", sep=""))
     .Fortran("dann2", as.integer(np[1]), as.integer(np[2]), x, 
         y, as.integer(nclass), t(testx), as.logical(cv), as.integer(ntest), 
         predict = matrix(integer(ntest * neps), ntest, neps, 

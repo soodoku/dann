@@ -7,5 +7,5 @@
 #'
 #' 
 #' @docType package
-#' @author Trevor Hastie and Gaurav Sood
+#' @author Trevor Hastie
 NULL

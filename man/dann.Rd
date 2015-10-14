@@ -4,14 +4,17 @@
 \alias{dann}
 \title{dann}
 \usage{
-# dann()
+\dontrun{
+dann(x <- matrix(rnorm(120,1,.2)), testx <- glass.test$x, y <- matrix(rnorm(120,1,.5)),
+epsilon = 1, fullw = FALSE, iter = 100,  covmin = 1e-04, cv = FALSE)
+}
 }
 \arguments{
 \item{x}{matrix}
 
 \item{testx}{test}
 
-\item{y}{y}
+\item{y}{labels}
 
 \item{k}{number of clusters}
 
@@ -19,15 +22,15 @@
 
 \item{epsilon}{epsilon}
 
-\item{fullw}{fullw}
+\item{fullw}{Boolean}
 
-\item{scalar}{boolean}
+\item{scalar}{Boolean}
 
-\item{iter}{number of iterations}
+\item{iter}{maximum number of iterations}
 
 \item{covmin}{cov}
 
-\item{cv}{cross-validate}
+\item{cv}{boolean reflecting whether to cross-validate or not}
 }
 \value{
 A list with items including Name of the Application, No. of pages remaining (given the money),

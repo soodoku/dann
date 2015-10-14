@@ -26,16 +26,6 @@ function (x, testx = matrix(double(p),
     nrow = 1), y, k = 5, kmetric = max(0.2 * 
     n, 50), epsilon = 1, plus = 1, trace = FALSE, ...) 
 {
-    min2d <- function (mat) 
-    {
-        i <- order(mat)[1]
-        dd <- dim(mat)
-        i1 <- trunc(i/dd[1]) + 1
-        i2 <- i %% dd[1]
-        if (i2 == 0) 
-            i2 <- dd[1]
-        c(i2, i1)
-    }
     mm <- apply(x, 2, var)
     x <- scale(x, F, sqrt(mm))
     testx <- scale(testx, F, sqrt(mm))
