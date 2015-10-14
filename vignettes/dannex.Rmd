@@ -37,7 +37,6 @@ function(ntr=200, nte=1){
 ex1 <-
 function (fullw = FALSE, iter = 1) 
 {
-	#list(c("#attach(\"dann.Data\")", "#attach(\"dann.Data\")", "#options(error=dump.frames)", "# 2d normals"))
 	n <- 200
 	nte <- 500
 	z <- gen.ex1(n/2, nte/2)		

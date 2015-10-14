@@ -47,7 +47,7 @@ function (x, y,
         which = integer(n), dist = double(n), covw = matrix(double(p^2), 
             p, p), covmin = as.double(1e-04), means = matrix(double(nclass * 
             p), nclass, p), weight = double(n), between = matrix(double(p^2), 
-            p, p), double(n + 2 * p^2 + 3 * p), PACKAGE ="dann")$between
+            p, p), double(n + 2 * p^2 + 3 * p))$between
     browser()
     eb <- eigen(between)
     x <- x %*% eb$vectors
