@@ -1,9 +1,9 @@
 #' dann
 #'
-#' Main function 
+#' Run Discriminant Adaptive Nearest Neighbors 
 #' 
-#' @param x  matrix
-#' @param testx test
+#' @param x     covariates matrix
+#' @param testx test covariate matrix
 #' @param y  labels
 #' @param k  number of clusters
 #' @param kmetric metric

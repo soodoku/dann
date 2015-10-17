@@ -1,24 +1,25 @@
 #' dannsub
 #'
-#' @param x
-#' @param km
-#' @param y
-#' @param k  
-#' @param epsilon 
-#' @param fullw
-#' @param scalex
-#' @param scalar
-#' @param iter
-#' @param dims
-#' @param iter.sub
-#' @param iter
-#' @param method
-#' @param xnew
-#' @param ynew
+#' @param x covariate matrix
+#' @param km max subspace
+#' @param y  labels
+#' @param k  number of clusters
+#' @param epsilon error
+#' @param fullw  Boolean
+#' @param scalex Boolean, default true
+#' @param scalar Boolean, 
+#' @param iter   Max number of iterations
+#' @param iter.sub Max. number of subspace iterations
+#' @param method  knn
+#' @param xnew n
+#' @param ynew 
 #'
 #' @return an object of class dannsub
 #'
-#' @usage # dannsub()
+#' @usage \dontrun {
+#' dannsub(km = max(50, 0.2 * n), k = 5, epsilon = 1, fullw = FALSE, scalex = TRUE, 
+#'    scalar = TRUE, dims = seq(p), iter.sub = 1, iter = 1, method = "knn", xnew, ynew)
+#' }
 
 dannsub <-
 function (x, y, 

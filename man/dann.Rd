@@ -10,9 +10,9 @@ epsilon = 1, fullw = FALSE, iter = 100,  covmin = 1e-04, cv = FALSE)
 }
 }
 \arguments{
-\item{x}{matrix}
+\item{x}{covariates matrix}
 
-\item{testx}{test}
+\item{testx}{test covariate matrix}
 
 \item{y}{labels}
 
@@ -37,6 +37,6 @@ A list with items including Name of the Application, No. of pages remaining (giv
 No. of fields remaining (given the money), and when the application credits expire.
 }
 \description{
-Main function
+Run Discriminant Adaptive Nearest Neighbors
 }
 

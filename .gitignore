@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 dann_dev
+src-i386
+src-x64

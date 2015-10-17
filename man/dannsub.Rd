@@ -4,38 +4,37 @@
 \alias{dannsub}
 \title{dannsub}
 \usage{
-# dannsub()
+\dontrun {
+dannsub(km = max(50, 0.2 * n), k = 5, epsilon = 1, fullw = FALSE, scalex = TRUE,
+   scalar = TRUE, dims = seq(p), iter.sub = 1, iter = 1, method = "knn", xnew, ynew)
+}
 }
 \arguments{
-\item{x}{}
+\item{x}{covariate matrix}
 
-\item{y}{}
+\item{y}{labels}
 
-\item{km}{}
+\item{km}{max subspace}
 
-\item{k}{}
+\item{k}{number of clusters}
 
-\item{epsilon}{}
+\item{epsilon}{error}
 
-\item{fullw}{}
+\item{fullw}{Boolean}
 
-\item{scalex}{}
+\item{scalex}{Boolean, default true}
 
-\item{scalar}{}
+\item{scalar}{Boolean,}
 
-\item{dims}{}
+\item{iter.sub}{Max. number of subspace iterations}
 
-\item{iter.sub}{}
+\item{iter}{Max number of iterations}
 
-\item{iter}{}
+\item{method}{knn}
 
-\item{method}{}
-
-\item{xnew}{}
+\item{xnew}{n}
 
 \item{ynew}{}
-
-\item{iter}{}
 }
 \value{
 an object of class dannsub
