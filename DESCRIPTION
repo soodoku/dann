@@ -2,8 +2,11 @@ Package: dann
 Title: Discriminant Adaptive Nearest Neighbor Classification
 Version: 0.0.1
 Author: Trevor Hastie <gsood07@gmail.com> [aut, cre]
-Description: Implements the method discussed in the paper 
-Depends: R (>= 3.2.0)
+Description: Implements the method discussed in the paper
+Depends:
+    R (>= 3.2.0)
 License: GPL v3 + file LICENSE
 LazyData: true
-Imports: mda
+Imports:
+    mda
+RoxygenNote: 5.0.0
