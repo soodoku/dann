@@ -3,11 +3,10 @@
 \docType{data}
 \name{glass.test}
 \alias{glass.test}
-\alias{glass.train}
 \title{Test data for glass}
 \format{List of two elements: x - 96 x 9 training data matrix, y - vector of labels}
 \usage{
-glass.train
+glass.test
 }
 \description{
 Test data for glass

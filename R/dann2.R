@@ -1,7 +1,7 @@
 #' dann2
 #'
-#' @param x
-#' @param testx
+#' @param x 
+#' @param testx 
 #' @param y
 #' @param k 
 #' @param kmetric 

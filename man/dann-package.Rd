@@ -2,7 +2,6 @@
 % Please edit documentation in R/dann-package.R
 \docType{package}
 \name{dann-package}
-\alias{dann}
 \alias{dann-package}
 \title{dann: Discriminant Adaptive Nearest Neighbors}
 \description{

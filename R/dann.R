@@ -57,5 +57,5 @@ function(x, testx = matrix(double(p), nrow = 1), y, k = 5,
 			fullw, scalar, epsilon = epsilon, as.integer(neps), integer(n), 
 			double(n), matrix(double(p^2), p, p), as.double(covmin), 
 			matrix(double(nclass * p), nclass, p), double(n), as.single(runif(ntest)), 
-			double(n + 2 * p^2 + 3 * p))$predict
+			double(n + 2 * p^2 + 3 * p), PACKAGE ="dann")$predict
 }

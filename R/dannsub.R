@@ -11,12 +11,13 @@
 #' @param iter   Max number of iterations
 #' @param iter.sub Max. number of subspace iterations
 #' @param method  knn
-#' @param xnew n
-#' @param ynew 
+#' @param dims
+#' @param xnew new x
+#' @param ynew new ys
 #'
 #' @return an object of class dannsub
 #'
-#' @examples \dontrun {
+#' @examples \dontrun{
 #' dannsub(km = max(50, 0.2 * n), k = 5, epsilon = 1, fullw = FALSE, scalex = TRUE, 
 #'    scalar = TRUE, dims = seq(p), iter.sub = 1, iter = 1, method = "knn", xnew, ynew)
 #' }
@@ -48,7 +49,7 @@ function (x, y,
         which = integer(n), dist = double(n), covw = matrix(double(p^2), 
             p, p), covmin = as.double(1e-04), means = matrix(double(nclass * 
             p), nclass, p), weight = double(n), between = matrix(double(p^2), 
-            p, p), double(n + 2 * p^2 + 3 * p))$between
+            p, p), double(n + 2 * p^2 + 3 * p), PACKAGE ="dann")$between
     browser()
     eb <- eigen(between)
     x <- x %*% eb$vectors

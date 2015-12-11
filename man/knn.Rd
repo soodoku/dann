@@ -16,8 +16,7 @@ knn(train, test, cl, k = 1)
 \item{k}{number of clusters}
 }
 \value{
-A list with items including Name of the Application, No. of pages remaining (given the money), 
-No. of fields remaining (given the money), and when the application credits expire.
+result
 }
 \description{
 K-nearest Neighbors

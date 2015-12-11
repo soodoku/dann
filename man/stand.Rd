@@ -9,13 +9,13 @@ stand(x = NA, xx = NA)
 \arguments{
 \item{x}{matrix}
 
-\item{xx}{matrix with same number of columns as x}
+\item{xx}{another matrix, with same number of columns as x}
 }
 \value{
-list of standardized matrices along with scaling information (centers)
+list of standardized matrices x and xx along with scaling information --- mean and standard deviation of original columns
 }
 \description{
-Standardize each column of the matrix
+Standardize each column of both of the matrices with mean and standard deviation derived from the first matrix.
 }
 \examples{
 stand(matrix(1:6, ncol=3), matrix(1:6, ncol=3))

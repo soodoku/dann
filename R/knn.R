@@ -8,8 +8,7 @@
 #' @param k  number of clusters
 #'
 #'
-#' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
-#' No. of fields remaining (given the money), and when the application credits expire. 
+#' @return result
 #' 
 #' @export
 #' 
@@ -33,7 +32,7 @@ knn <- function (train, test, cl, k = 1)
     else cl1 <- cl
     z <- .Fortran("knn", as.integer(k), as.integer(ntr), as.integer(nte), 
         as.integer(p), as.double(train), as.integer(cl1), as.double(test), 
-        res = integer(nte), u = as.single(runif(nte)), d = double(nte))
+        res = integer(nte), u = as.single(runif(nte)), d = double(nte), PACKAGE ="dann")
     res <- z$res
     if (is.factor(cl)) {
         levels(res) <- levels(cl)
