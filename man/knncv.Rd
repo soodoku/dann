@@ -9,7 +9,7 @@ knncv(x, y, k = 5)
 \arguments{
 \item{x}{matrix}
 
-\item{y}{}
+\item{y}{labels}
 
 \item{k}{number of clusters}
 }

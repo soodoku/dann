@@ -1,8 +1,14 @@
-#' min2d
+#' mydann
 #'
-#' @param mat matrix 
-#' @return  
-#' @export
+#' @param train.data training data. All the features in matrix x. and class labels in y. 
+#' @param test.data  test data. Same format as the test data
+#' @param p dimensions of x
+#' @param kmetric k met
+#' @param k Number of nearest neighbors
+#' @param epsilon.list epsilon
+#' @param iter.list iteration
+#' 
+#' @return  results
 #' @examples \dontrun{ 
 #' mydann()
 #' }

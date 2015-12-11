@@ -2,8 +2,9 @@
 #'
 #' @param mat matrix 
 #' @return A vector
-#' @export
-#' @examples min2d(matrix(rnorm(100,1,.2), ncol=5))
+#' @examples \dontrun{
+#' min2d(matrix(rnorm(100,1,.2), ncol=5))
+#' }
 
 min2d <-
 function (mat=NULL) 

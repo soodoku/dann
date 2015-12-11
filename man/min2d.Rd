@@ -16,6 +16,8 @@ A vector
 min2d
 }
 \examples{
+\dontrun{
 min2d(matrix(rnorm(100,1,.2), ncol=5))
+}
 }
 

@@ -25,15 +25,17 @@ dannsub(x, y, km = max(50, 0.2 * n), k = 5, epsilon = 1, fullw = FALSE,
 
 \item{scalar}{Boolean,}
 
+\item{dims}{dims}
+
 \item{iter.sub}{Max. number of subspace iterations}
 
 \item{iter}{Max number of iterations}
 
 \item{method}{knn}
 
-\item{xnew}{n}
+\item{xnew}{new x}
 
-\item{ynew}{}
+\item{ynew}{new ys}
 }
 \value{
 an object of class dannsub

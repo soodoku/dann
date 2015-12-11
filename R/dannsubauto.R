@@ -1,20 +1,13 @@
 #' dannsubauto
 #'
-#' @param x
-#' @param km
-#' @param y
-#' @param k  
-#' @param epsilon 
-#' @param fullw
-#' @param scalex
-#' @param scalar
-#' @param iter
-#' @param dims
-#' @param iter.sub
-#' @param iter
-#' @param method
-#' @param xnew
-#' @param ynew
+#' @param x mat
+#' @param testx test mat
+#' @param y labels
+#' @param k k
+#' @param plus 1
+#' @param kmetric kmet
+#' @param epsilon epsilon
+#' @param trace Boolean
 #'
 #' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
 #' No. of fields remaining (given the money), and when the application credits expire. 

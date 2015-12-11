@@ -4,16 +4,33 @@
 \alias{nnsubspace}
 \title{nnsubspace}
 \usage{
-# dannsub()
+nnsubspace(x, y, k = length(y)/2, epsilon = 1, fullw = FALSE, iter = 1,
+  cv = 0)
 }
 \arguments{
-\item{k}{}
+\item{x}{mat}
 
-\item{epsilon}{}
+\item{y}{labels}
 
-\item{cv}{}
+\item{k}{clusters}
+
+\item{epsilon}{epsilon}
+
+\item{fullw}{fullw}
+
+\item{iter}{iter}
+
+\item{cv}{cv}
+}
+\value{
+subspace
 }
 \description{
 nnsubspace
+}
+\examples{
+\dontrun{
+dannsub()
+}
 }
 

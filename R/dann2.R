@@ -1,17 +1,17 @@
 #' dann2
 #'
-#' @param x 
-#' @param testx 
-#' @param y
-#' @param k 
-#' @param kmetric 
-#' @param epsilon 
-#' @param rate 
-#' @param fullw
-#' @param scalar
-#' @param iter
-#' @param covmin
-#' @param cv
+#' @param x xmat
+#' @param testx test mat 
+#' @param y labels
+#' @param k nearest neighbors
+#' @param kmetric kmet
+#' @param epsilon epsilon
+#' @param rate rate
+#' @param fullw fullw
+#' @param scalar scalar
+#' @param iter iter
+#' @param covmin covmin
+#' @param cv cv
 #'
 #' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
 #' No. of fields remaining (given the money), and when the application credits expire. 

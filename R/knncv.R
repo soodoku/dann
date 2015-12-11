@@ -3,7 +3,7 @@
 #' Cross-validated k-means
 #' 
 #' @param x matrix  
-#' @param y 
+#' @param y labels
 #' @param k number of clusters
 #'
 #' @return list of standardized matrices along with scaling information (centers)

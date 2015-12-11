@@ -8,11 +8,21 @@ dannsubauto(x, testx = matrix(double(p), nrow = 1), y, k = 5,
   kmetric = max(0.2 * n, 50), epsilon = 1, plus = 1, trace = FALSE, ...)
 }
 \arguments{
-\item{k}{}
+\item{x}{mat}
 
-\item{epsilon}{}
+\item{testx}{test mat}
 
-\item{ynew}{}
+\item{y}{labels}
+
+\item{k}{k}
+
+\item{kmetric}{kmet}
+
+\item{epsilon}{epsilon}
+
+\item{plus}{1}
+
+\item{trace}{Boolean}
 }
 \value{
 A list with items including Name of the Application, No. of pages remaining (given the money), 

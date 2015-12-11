@@ -1,17 +1,18 @@
-### dann: Discriminant Adaptive Nearest Neighbors
+## dann: Discriminant Adaptive Nearest Neighbors
 
+Implements the method discussed in [this paper](https://web.stanford.edu/~hastie/Papers/dann_IEEE.pdf).
 
-#### Load the package
+### Load the package
 
-To get started, load the package. The latest version of the package will always be on github. Instructions for installing the package from github are provided below.
+To get started, load the package. The latest version of the package will always be on GitHub. To install from GitHub:
 
 ```{r, eval=FALSE, install}
-library(dann)
+devtools::install_github("soodoku/dann")
 ```
 
-#####  Generate some simulated data
+####  Generate some simulated data
 
-```{r, eval=FALSE, genex1}
+```{r, genex1}
 gen.ex1 <- 
 function(ntr=200, nte=1){
 	
@@ -33,7 +34,7 @@ function(ntr=200, nte=1){
 }
 ```
 
-```{r, eval=FALSE, genex1}
+```{r, ex1}
 ex1 <-
 function (fullw = FALSE, iter = 1) 
 {
@@ -66,10 +67,10 @@ function (fullw = FALSE, iter = 1)
 ```
 ## Gen ex2
 
-```{r, eval=FALSE, genex2}
+```{r genex2}
 gen.ex2 <- 
-function(ntr, nte, nextra=0, delta=1){
-		
+function(ntr, nte, nextra=0, delta=1)
+{		
 	sigma <- 1
 	rho <- .7
 	k <- sqrt( 1/rho^2 -1)
@@ -94,12 +95,11 @@ function(ntr, nte, nextra=0, delta=1){
 }
 ```
 
-```{r, eval=FALSE, ex2}
+```{r ex2}
 
 ex2 <-
 function (fullw = FALSE, covmin = 1e-04, iter = 1) 
 {
-	#list(c("#attach(\"dann.RData\")", "#attach(\"dannex.RData\")", "#options(error=dump.frames)", "# 2d normals with noise"))
 	data(dannt)
 	n <- 200
 	nte <- 500
@@ -132,12 +132,11 @@ function (fullw = FALSE, covmin = 1e-04, iter = 1)
 ```
 # Glass Data Example
 
-```{r, eval=FALSE, glass}
+```{r glass}
 glass <-
 function (fullw = FALSE, iter = 1, kmet = 50) 
 {
 	data(dannt)
-	#attach(paste(.libPaths()[1], "dann/data/", "dann.RData", sep=""))
 	set.seed(301)
     nte <- 96
     xs <- glass.train$x
@@ -159,16 +158,14 @@ function (fullw = FALSE, iter = 1, kmet = 50)
 ```
 ## Sonar Data Example
 
-```{r, eval=FALSE, sonar}
+```{r sonar}
 
 sonar <-
 function (fullw = FALSE, scalar = FALSE, iter = 1) 
 {
 	data(dannt)
-	#attach(paste(.libPaths()[1], "dann/data/", "dann.RData", sep=""))
 	sonar.train <- list(x=Sonar[1:104,1:60], g=Sonar[1:104,61])
 	sonar.test  <- list(x=Sonar[105:208,1:60], g = Sonar[105:208,61])
-	#options(error = dump.frames)
 	set.seed(301)
 	mm <- apply(sonar.train$x, 2, mean)
 	dd <- sqrt(apply(sonar.train$x, 2, var))
@@ -184,7 +181,7 @@ function (fullw = FALSE, scalar = FALSE, iter = 1)
 
 ##	Vowel
 
-```{r, eval=FALSE, vowel}
+```{r vowel}
 
 vowel <-
 function (fullw = FALSE, iter = 1) 

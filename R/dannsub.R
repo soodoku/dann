@@ -11,7 +11,7 @@
 #' @param iter   Max number of iterations
 #' @param iter.sub Max. number of subspace iterations
 #' @param method  knn
-#' @param dims
+#' @param dims dims
 #' @param xnew new x
 #' @param ynew new ys
 #'

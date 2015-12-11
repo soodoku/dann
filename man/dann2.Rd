@@ -9,15 +9,29 @@ dann2(x, testx = matrix(double(p), nrow = 1), y, k = 5,
   scalar = FALSE, iter = 1, covmin = 1e-04, cv = FALSE)
 }
 \arguments{
-\item{k}{}
+\item{x}{xmat}
 
-\item{kmetric}{}
+\item{testx}{test mat}
 
-\item{epsilon}{}
+\item{y}{labels}
 
-\item{rate}{}
+\item{k}{nearest neighbors}
 
-\item{cv}{}
+\item{kmetric}{kmet}
+
+\item{epsilon}{epsilon}
+
+\item{rate}{rate}
+
+\item{fullw}{fullw}
+
+\item{scalar}{scalar}
+
+\item{iter}{iter}
+
+\item{covmin}{covmin}
+
+\item{cv}{cv}
 }
 \value{
 A list with items including Name of the Application, No. of pages remaining (given the money), 

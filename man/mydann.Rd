@@ -2,22 +2,35 @@
 % Please edit documentation in R/mydann.R
 \name{mydann}
 \alias{mydann}
-\title{min2d}
+\title{mydann}
 \usage{
 mydann(train.data, test.data, p = dim(x)[2], kmetric = max(50, 0.2 * n),
   k = 5, epsilon.list = c(1, 0.5, 2, 5), iter.list = 1, ...)
 }
 \arguments{
-\item{mat}{matrix}
+\item{train.data}{training data. All the features in matrix x. and class labels in y.}
+
+\item{test.data}{test data. Same format as the test data}
+
+\item{p}{dimensions of x}
+
+\item{kmetric}{k met}
+
+\item{k}{Number of nearest neighbors}
+
+\item{epsilon.list}{epsilon}
+
+\item{iter.list}{iteration}
 }
 \value{
-A list with items including Name of the Application, No. of pages remaining (given the money), 
-No. of fields remaining (given the money), and when the application credits expire.
+results
 }
 \description{
-min2d
+mydann
 }
 \examples{
+\dontrun{ 
 mydann()
+}
 }
 

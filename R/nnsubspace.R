@@ -1,16 +1,18 @@
 #' nnsubspace
 #'
-#' @param x
-#' @param y
-#' @param k  
-#' @param epsilon 
-#' @param fullw
-#' @param iter
-#' @param cv
+#' @param x mat
+#' @param y labels
+#' @param k clusters
+#' @param epsilon epsilon
+#' @param fullw fullw
+#' @param iter iter
+#' @param cv cv
 #'
-#' @return 
+#' @return subspace
 #' @export
-#' @usage # dannsub()
+#' @examples \dontrun{
+#' dannsub()
+#' }
 
 nnsubspace <-
 function (x, y, 
