@@ -13,7 +13,7 @@
 #' 
 #' @export
 #' 
-#' @usage \dontrun{ 
+#' @examples \dontrun{ 
 #' knn()
 #'}
 

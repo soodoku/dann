@@ -20,7 +20,7 @@
 #' 
 #' @export
 #' 
-#' @usage \dontrun{
+#' @examples \dontrun{
 #' dann(x <- matrix(rnorm(120,1,.2)), testx <- glass.test$x, y <- matrix(rnorm(120,1,.5)), 
 #' epsilon = 1, fullw = FALSE, iter = 100,  covmin = 1e-04, cv = FALSE)
 #' }
@@ -43,9 +43,12 @@ function(x, testx = matrix(double(p), nrow = 1), y, k = 5,
 	p <- np[2]
 	n <- np[1]
 	storage.mode(testx) <- "double"
-	if (cv) 
+	if (cv) {
 		ntest <- n
-	else ntest <- nrow(testx)
+	} else {
+		ntest <- nrow(testx)
+	}
+
 	.Fortran("dann", as.integer(np[1]), as.integer(np[2]), x, 
 			y, as.integer(nclass), t(testx), as.logical(cv), as.integer(ntest), 
 			predict = matrix(integer(ntest * neps), ntest, neps, 

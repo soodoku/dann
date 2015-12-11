@@ -16,7 +16,7 @@
 #'
 #' @return an object of class dannsub
 #'
-#' @usage \dontrun {
+#' @examples \dontrun {
 #' dannsub(km = max(50, 0.2 * n), k = 5, epsilon = 1, fullw = FALSE, scalex = TRUE, 
 #'    scalar = TRUE, dims = seq(p), iter.sub = 1, iter = 1, method = "knn", xnew, ynew)
 #' }

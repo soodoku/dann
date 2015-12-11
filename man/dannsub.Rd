@@ -4,10 +4,9 @@
 \alias{dannsub}
 \title{dannsub}
 \usage{
-\dontrun {
-dannsub(km = max(50, 0.2 * n), k = 5, epsilon = 1, fullw = FALSE, scalex = TRUE, 
-   scalar = TRUE, dims = seq(p), iter.sub = 1, iter = 1, method = "knn", xnew, ynew)
-}
+dannsub(x, y, km = max(50, 0.2 * n), k = 5, epsilon = 1, fullw = FALSE,
+  scalex = TRUE, scalar = TRUE, dims = seq(p), iter.sub = 1, iter = 1,
+  method = "knn", xnew, ynew)
 }
 \arguments{
 \item{x}{covariate matrix}
@@ -41,5 +40,11 @@ an object of class dannsub
 }
 \description{
 dannsub
+}
+\examples{
+\dontrun {
+dannsub(km = max(50, 0.2 * n), k = 5, epsilon = 1, fullw = FALSE, scalex = TRUE, 
+   scalar = TRUE, dims = seq(p), iter.sub = 1, iter = 1, method = "knn", xnew, ynew)
+}
 }
 

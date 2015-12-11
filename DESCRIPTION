@@ -1,12 +1,15 @@
 Package: dann
 Title: Discriminant Adaptive Nearest Neighbor Classification
-Version: 0.0.1
+Version: 0.1
 Author: Trevor Hastie <gsood07@gmail.com> [aut, cre]
+Maintainer: Gaurav Sood <gsood07@gmail.com>
 Description: Implements the method discussed in the paper
+URL: http://github.com/soodoku/dann
+BugReports: http://github.com/soodoku/dann/issues
 Depends:
     R (>= 3.2.0)
 License: GPL v3 + file LICENSE
 LazyData: true
 Imports:
     mda
-RoxygenNote: 5.0.0
+RoxygenNote: 5.0.1

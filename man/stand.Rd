@@ -4,7 +4,7 @@
 \alias{stand}
 \title{stand}
 \usage{
-stand(matrix(1:6, ncol=3), matrix(1:6, ncol=3))
+stand(x = NA, xx = NA)
 }
 \arguments{
 \item{x}{matrix}
@@ -16,5 +16,8 @@ list of standardized matrices along with scaling information (centers)
 }
 \description{
 Standardize each column of the matrix
+}
+\examples{
+stand(matrix(1:6, ncol=3), matrix(1:6, ncol=3))
 }
 

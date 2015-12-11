@@ -3,7 +3,7 @@
 #' @param mat matrix 
 #' @return A vector
 #' @export
-#' @usage min2d(matrix(rnorm(100,1,.2), ncol=5))
+#' @examples min2d(matrix(rnorm(100,1,.2), ncol=5))
 
 min2d <-
 function (mat=NULL) 

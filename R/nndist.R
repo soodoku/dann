@@ -18,8 +18,9 @@
 #' 
 #' @export
 #' 
-#' @usage # dann()
-#'
+#' @examples \dontrun{
+#' nndist()
+#'}
 
 nndist <-
 function (x, y, 

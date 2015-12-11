@@ -4,7 +4,7 @@
 \alias{min2d}
 \title{min2d}
 \usage{
-min2d(matrix(rnorm(100,1,.2), ncol=5))
+min2d(mat = NULL)
 }
 \arguments{
 \item{mat}{matrix}
@@ -14,5 +14,8 @@ A vector
 }
 \description{
 min2d
+}
+\examples{
+min2d(matrix(rnorm(100,1,.2), ncol=5))
 }
 

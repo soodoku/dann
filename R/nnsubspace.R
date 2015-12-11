@@ -8,8 +8,7 @@
 #' @param iter
 #' @param cv
 #'
-#' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
-#' No. of fields remaining (given the money), and when the application credits expire. 
+#' @return 
 #' @export
 #' @usage # dannsub()
 

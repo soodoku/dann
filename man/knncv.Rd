@@ -4,9 +4,7 @@
 \alias{knncv}
 \title{knncv}
 \usage{
-\dontrun{
-knncv(x, y, k=5)
-}
+knncv(x, y, k = 5)
 }
 \arguments{
 \item{x}{matrix}
@@ -20,5 +18,10 @@ list of standardized matrices along with scaling information (centers)
 }
 \description{
 Cross-validated k-means
+}
+\examples{
+\dontrun{
+knncv(x, y, k=5)
+}
 }
 

@@ -16,7 +16,6 @@
 #' @return A list with items including Name of the Application, No. of pages remaining (given the money), 
 #' No. of fields remaining (given the money), and when the application credits expire. 
 #' @export
-#' @usage # dann2()
 
 dann2 <-
 function (x, testx = matrix(double(p), nrow = 1), y, k = 5, kmetric = length(y)/2, 

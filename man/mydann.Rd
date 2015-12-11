@@ -4,7 +4,8 @@
 \alias{mydann}
 \title{min2d}
 \usage{
-min2d()
+mydann(train.data, test.data, p = dim(x)[2], kmetric = max(50, 0.2 * n),
+  k = 5, epsilon.list = c(1, 0.5, 2, 5), iter.list = 1, ...)
 }
 \arguments{
 \item{mat}{matrix}
@@ -15,5 +16,8 @@ No. of fields remaining (given the money), and when the application credits expi
 }
 \description{
 min2d
+}
+\examples{
+mydann()
 }
 

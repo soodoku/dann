@@ -4,7 +4,8 @@
 \alias{dannsubauto}
 \title{dannsubauto}
 \usage{
-# dannsub()
+dannsubauto(x, testx = matrix(double(p), nrow = 1), y, k = 5,
+  kmetric = max(0.2 * n, 50), epsilon = 1, plus = 1, trace = FALSE, ...)
 }
 \arguments{
 \item{k}{}

@@ -8,7 +8,7 @@
 #'
 #' @return list of standardized matrices along with scaling information (centers)
 #' @export
-#' @usage \dontrun{
+#' @examples \dontrun{
 #' knncv(x, y, k=5)
 #' }
 
