@@ -4,7 +4,7 @@
 #'
 #' @description Discriminant Adaptive Nearest Neighbors
 #'
-#' @importFrom mda mda
+#' @importFrom mda fda mda
 #' @docType package
 #' @author Trevor Hastie
 NULL

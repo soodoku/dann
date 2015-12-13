@@ -11,7 +11,7 @@ knn(train, test, cl, k = 1)
 
 \item{test}{test}
 
-\item{cl}{number of clusters}
+\item{cl}{y}
 
 \item{k}{number of clusters}
 }
