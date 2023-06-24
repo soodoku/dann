@@ -25,37 +25,36 @@
 #' epsilon = 1, fullw = FALSE, iter = 100,  covmin = 1e-04, cv = FALSE)
 #' }
 
-dann <- 
-function(x, testx = matrix(double(p), nrow = 1), y, k = 5, 
-				kmetric = max(50, 0.2 * n), epsilon = 1, fullw = FALSE, scalar = FALSE, iter = 1, 
-				covmin = 1e-04, cv = FALSE) 
-{
-	# tester: epsilon = 1; rate = 0.5; fullw = FALSE; scalar = FALSE; iter = 1; covmin = 1e-04; cv = FALSE
-	# k=5; x <- matrix(rnorm(120,1,.2)); y <- matrix(rnorm(120,1,.5)); testx <- glass.test$x; ntest <- nrow(testx)
-	# kmetric = max(50, 0.2 * n)
-	storage.mode(x) 	<- "double"
-	storage.mode(testx) <- "double"
-	storage.mode(y) 	<- "integer"
-	nclass <- length(table(y))
-	storage.mode(epsilon) <- "double"
-	neps <- length(epsilon)
-	np <- dim(x)
-	p <- np[2]
-	n <- np[1]
-	storage.mode(testx) <- "double"
-	if (cv) {
-		ntest <- n
-	} else {
-		ntest <- nrow(testx)
-	}
-
-	.Fortran("dann", as.integer(np[1]), as.integer(np[2]), x, 
-			y, as.integer(nclass), t(testx), as.logical(cv), as.integer(ntest), 
-			predict = matrix(integer(ntest * neps), ntest, neps, 
-					dimnames = list(NULL, format(round(epsilon, 5)))), 
-			as.integer(kmetric), as.integer(k), as.integer(iter), 
-			fullw, scalar, epsilon = epsilon, as.integer(neps), integer(n), 
-			double(n), matrix(double(p^2), p, p), as.double(covmin), 
-			matrix(double(nclass * p), nclass, p), double(n), as.single(runif(ntest)), 
-			double(n + 2 * p^2 + 3 * p), PACKAGE ="dann")$predict
+dann <- function(x, testx = matrix(nrow = 1, ncol = p), y, k = 5,
+                 kmetric = max(50, 0.2 * n), epsilon = 1, fullw = FALSE, scalar = FALSE, iter = 1,
+                 covmin = 1e-04, cv = FALSE) {
+  
+  storage.mode(x)  <- "double"
+  storage.mode(testx) <- "double"
+  storage.mode(y)  <- "integer"
+  
+  np <- dim(x)
+  p <- np[2]
+  n <- np[1]
+  
+  storage.mode(epsilon) <- "double"
+  neps <- length(epsilon)
+  nclass <- length(table(y))
+  
+  if (cv) {
+    ntest <- n
+  } else {
+    ntest <- nrow(testx)
+  }
+  
+  pred <- matrix(integer(ntest * neps), nrow = ntest, ncol = neps,
+                 dimnames = list(NULL, format(round(epsilon, 5))))
+  
+  .Fortran("dann",
+           np[1], np[2], x, y, nclass, t(testx), cv, ntest,
+           pred, kmetric, k, iter, fullw, scalar, epsilon,
+           neps, integer(n), double(n), matrix(double(p^2), nrow = p, ncol = p),
+           covmin, matrix(double(nclass * p), nrow = nclass, ncol = p),
+           double(n), as.single(runif(ntest)),
+           double(n + 2 * p^2 + 3 * p), PACKAGE = "dann")$pred
 }
