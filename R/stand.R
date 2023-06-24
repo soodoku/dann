@@ -10,12 +10,26 @@
 #' @export
 #' @examples stand(matrix(1:6, ncol=3), matrix(1:6, ncol=3))
 
-stand <-
-function (x = NA, xx = NA) 
-{
+stand <- function(x = NA, xx = NA) {
+  if (is.na(x) && is.na(xx)) {
+    stop("Both input matrices 'x' and 'xx' are missing.")
+  }
+  
+  if (!is.na(x)) {
     mm <- apply(x, 2, mean)
     dd <- sqrt(apply(x, 2, var))
-    x  <- scale(x, mm, dd)
-    xx <- scale(xx, mm, dd)
-    return(list(x = x, xx = xx))
+    x <- scale(x, center = mm, scale = dd)
+  }
+  
+  if (!is.na(xx)) {
+    if (is.na(x)) {
+      stop("Input matrix 'x' is missing. Cannot perform standardization on 'xx' without 'x'.")
+    }
+    
+    mm <- apply(xx, 2, mean)
+    dd <- sqrt(apply(xx, 2, var))
+    xx <- scale(xx, center = mm, scale = dd)
+  }
+  
+  return(list(x = x, xx = xx))
 }
