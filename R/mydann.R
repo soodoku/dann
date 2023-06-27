@@ -13,34 +13,28 @@
 #' mydann()
 #' }
 
-mydann <- 
-function (train.data, test.data, p = dim(x)[2], kmetric = max(50, 0.2 * n), k = 5, epsilon.list = c(1, 0.5, 2, 5), iter.list = 1, ...) 
-{
-    this.call <- match.call()
-    x <- train.data$x
-    x <- x[, seq(p)]
-    y <- as.integer(factor(train.data$y))
-    yy <- as.integer(factor(test.data$y))
-    n <- length(y)
-    mm <- apply(x, 2, var)
-    x <- scale(x, F, sqrt(mm))
-    xx <- test.data$x
-    xx <- xx[, seq(p)]
-    xx <- scale(xx, F, sqrt(mm))
-    results <- matrix(0, length(iter.list), length(epsilon.list))
-    dimnames(results) <- list(format(round(iter.list, 0)), format(round(epsilon.list, 2)))
-    for (i in seq(along = iter.list)) {
-        iter <- iter.list[i]
-        a <- dann(x, xx, y, kmetric = kmetric, k = k, epsilon = epsilon.list, 
-            iter = iter, ...)
-        aa <- apply(a != yy, 2, sum)
-        cat("iter", iter, "error", aa, "\n")
-        results[i, ] <- aa
-    }
-    results
-    kk <- knn(x, xx, y, k = 5)
-    knnerror <- sum(kk != yy)
-    attr(results, "5nn") <- knnerror
-    attr(results, "call") <- this.call
-    results
+mydann <- function(train.data, test.data, p = dim(train.data$x)[2], kmetric = max(50, 0.2 * length(train.data$y)), k = 5, epsilon.list = c(1, 0.5, 2, 5), iter.list = 1, ...) {
+  this.call <- match.call()
+  x <- train.data$x[, seq(p)]
+  y <- as.integer(factor(train.data$y))
+  n <- length(y)
+  mm <- apply(x, 2, var)
+  x <- scale(x, center = FALSE, scale = sqrt(mm))
+  xx <- test.data$x[, seq(p)]
+  xx <- scale(xx, center = FALSE, scale = sqrt(mm))
+  results <- matrix(0, nrow = length(iter.list), ncol = length(epsilon.list))
+  dimnames(results) <- list(format(round(iter.list, 0)), format(round(epsilon.list, 2)))
+  for (i in seq_along(iter.list)) {
+    iter <- iter.list[i]
+    a <- dann2(x, testx = xx, y = y, kmetric = kmetric, k = k, epsilon = epsilon.list, iter = iter, ...)
+    aa <- apply(a != test.data$y, 2, sum)
+    cat("iter", iter, "error", aa, "\n")
+    results[i, ] <- aa
+  }
+  results
+  kk <- knn(x, xx, y, k = 5)
+  knnerror <- sum(kk != test.data$y)
+  attr(results, "5nn") <- knnerror
+  attr(results, "call") <- this.call
+  results
 }
